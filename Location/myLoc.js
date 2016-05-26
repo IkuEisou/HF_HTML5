@@ -152,6 +152,7 @@ function scrollMapToPosition(coords) {
 	var latitude = coords.latitude;
 	var longitude = coords.longitude;
 	var latlong = new google.maps.LatLng(latitude, longitude);
+	//使地图重新居中
 	map.panTo(latlong);
 
 	addMarker(map, latlong, "Your new location", "You moved to: " +

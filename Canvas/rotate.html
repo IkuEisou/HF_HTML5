@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Rotate canvas</title>
+	<script type="text/javascript" src="twittershirt.js"></script>
+	<script type="text/javascript">
+		function rotateCanvas(argument) {
+			// body...
+			var canvas = document.getElementById("canvas");
+			var context = canvas.getContext("2d");
+			var degrees = 36;
+
+			context.save();
+			context.translate(200, 200);
+			context.fillStyle = "rdba(50, 50, 50, .5)";
+
+			for (var i = 0; i < 360/degrees; i++) {
+				context.fillRect(0, 0, 100, 100);
+				context.rotate(degreeToRadians(degrees));
+			}
+			context.restore();
+		}
+		window.onload = rotateCanvas;
+	</script>
+</head>
+<body>
+<canvas id="canvas" width="600" height="600" ></canvas>
+</body>
+</html>
