@@ -1,26 +1,17 @@
 <!doctype html>
-<html lang="en">
+<html>
 <head>
   <title>歌单</title>
   <meta charset="utf-8">
-  <script type="text/javascript">
-    function addsongs(){
-    	var song1=document.getElementById("song1");
-    	var song2=document.getElementById("song2");
-    	var song3=document.getElementById("song3");
-    	song1.innerHTML="小星星";
-    	song2.innerHTML="小毛驴";
-    	song3.innerHTML="小马车";
-    }
-    window.onload=addsongs;
-  </script>
 </head>
 <body>
 	 <h1>My awesome playlist</h1>
-	 <ul id="playlist">
-	 	<li id="song1"></li>
-	 	<li id="song2"></li>
-	 	<li id="song3"></li>
-	 </ul>
+	 <ul id="playlist"></ul>
+ <form>
+   <input type="text" placeholder="请输入你要添加的歌名" id="songTextInput" name="song">
+   <input type="submit" id="addButton" name="add" value="add">
+ </form>
+ <script type="text/javascript" src="storelist.js"></script>
+ <script type="text/javascript" src="playlist.js"></script>
 </body>
 </html>
