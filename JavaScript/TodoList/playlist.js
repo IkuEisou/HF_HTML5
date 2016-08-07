@@ -6,6 +6,7 @@ function handleButtonClick(){
 	var msg;
 	if (songName == "") {
 		msg = "Please enter a song!";
+		alert(msg);
 	}
 	else{
 		msg = "Adding "+songName;
@@ -14,13 +15,12 @@ function handleButtonClick(){
 		li.innerHTML = songName;
 		ul.appendChild(li);
 		save(songName);
+		console.log(songName + " is saved!\n");
 	}
-	alert(msg);
 }
 
 function init() {
-	// body...
 	var button = document.getElementById("addButton");
 	button.onclick = handleButtonClick;
-	loadPlaylist();
+	loadPlaylist("playlist");
 }
